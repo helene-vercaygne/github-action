@@ -1,17 +1,19 @@
-name: "02 - simple exemple"
+name: "03 - pr"
 
 on: 
-  push:
+  pull_request:
     branches:
-    - main
-    - develop
+      - main
 
 jobs:
   afficher-info:
     runs-on: ubuntu-latest
     steps:
-      - name: "afficher des infos"
+      - name: "Afficher des infos pr"
         run: |
-          echo "Branch detect"
-          echo "Branch : ${{ github.actor }}"
+          echo "PR : "
+          echo "Author : ${{ github.actor }}"
+          echo "branch pr : ${{ github.head_ref }}"
+          echo "cible" : ${{ github.base_ref }}"
+          
          
