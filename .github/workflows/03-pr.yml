@@ -1,0 +1,17 @@
+name: "02 - simple exemple"
+
+on: 
+  push:
+    branches:
+    - main
+    - develop
+
+jobs:
+  afficher-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "afficher des infos"
+        run: |
+          echo "Branch detect"
+          echo "Branch : ${{ github.actor }}"
+         
