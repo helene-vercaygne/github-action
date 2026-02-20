@@ -2,6 +2,7 @@ name: "02 - simple exemple"
 
 on: 
   push:
+    branches:
     - main
     - develop
 
@@ -11,7 +12,6 @@ jobs:
     steps:
       - name: "afficher des infos"
         run: |
-          echo "push detected"
-          echo "author : ${{ github.actor }}"
-          echo "author : ${{ github.ref_name }}"
-          echo "author : ${{ github.sha }}"
+          echo "Branch detect"
+          echo "Branch : ${{ github.actor }}"
+         
